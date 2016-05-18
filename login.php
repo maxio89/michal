@@ -7,14 +7,13 @@
 
         $user_login = $_POST['login'];
     $user_pass  = $_POST['haslo'];
-    print "aa: $user_login";
-     print "aa: $user_pass";
+
     $sql = "SELECT * FROM dbtest.users WHERE login = '".$user_login."' AND haslo = '".$user_pass."';";
     $result = mysql_query($sql)
         or die(mysql_error());
         
     $rows = mysql_num_rows($result);
-    print "$rows";
+    
     if ($rows == 1) {
         
         $r = mysql_fetch_assoc($result);
@@ -43,9 +42,9 @@
             <div id=\"panel\">
                 <form method=\"post\" action=\"login.php\">
                     <label for=\"login\">Nazwa użytkownika:</label>
-                    <input type=\"text\" id=\"login\" name=\"login\">
+                    <input required type=\"text\" id=\"login\" name=\"login\">
                     <label for=\"haslo\">Hasło:</label>
-                    <input type=\"password\" id=\"haslo\" name=\"haslo\">
+                    <input required type=\"password\" id=\"haslo\" name=\"haslo\">
                 <div id=\"lower\">
                     <input type=\"submit\" value=\"Login\" name=\"submit\">
                 </div>

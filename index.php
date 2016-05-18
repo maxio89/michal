@@ -23,7 +23,7 @@
  ?>
 
 
-<a href='#'><span>Pokaż towary</span></a>
+<a href='towary.php'><span>Pokaż towary</span></a>
 <a href="pytania.php"><span>Zadaj pytanie</span></a>
 </div>
 </body>
