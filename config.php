@@ -1,8 +1,8 @@
 <?php
 	$db_host = "localhost";
-    $db_user = "root";
-    $db_pass = "";
-    $db_base = "dbtest";
+    $db_user = "m.gorla";
+    $db_pass = "12345";
+    $db_base = "m_gorla";
     
     $db = mysql_connect($db_host, $db_user, $db_pass);
     mysql_select_db($db_base, $db);
@@ -15,7 +15,7 @@
         $user_date   = $_SESSION['user_date'];
     }
 
-    if(!mysql_select_db("dbtest"))
+    if(!mysql_select_db("m_gorla"))
 {
      die('oops database selection problem ! --> '.mysql_error());
 }

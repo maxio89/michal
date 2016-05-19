@@ -8,7 +8,7 @@
         $user_login = $_POST['login'];
     $user_pass  = $_POST['haslo'];
 
-    $sql = "SELECT * FROM dbtest.users WHERE login = '".$user_login."' AND haslo = '".$user_pass."';";
+    $sql = "SELECT * FROM m_gorla.users WHERE login = '".$user_login."' AND haslo = '".$user_pass."';";
     $result = mysql_query($sql)
         or die(mysql_error());
         

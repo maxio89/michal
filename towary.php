@@ -43,7 +43,7 @@ echo "
 function szukaj() {
 	$nazwa = $_POST['nazwa'];
 
- $sql = "SELECT * FROM dbtest.towary WHERE nazwa like '{$nazwa}%';";
+ $sql = "SELECT * FROM m_gorla.towary WHERE nazwa like '{$nazwa}%';";
     $result = mysql_query($sql)
         or die(mysql_error());
         $rows = mysql_num_rows($result);
@@ -53,7 +53,7 @@ function szukaj() {
 
 
         echo "<span>".$row['nazwa']."-".$row['status']."";	
-		echo "<a href=\"realizuj.php?id=$row[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Realizuj</a></span>";		
+		echo "<a href=\"realizuj.php?id=$row[id]\" onClick=\"return confirm('Jestes pewien?')\">Realizuj</a></span>";		
 
     }
      echo "</div>";
